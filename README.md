@@ -77,27 +77,36 @@ git clone https://github.com/c3t1nn/spacerace_timeline.git
 # Переход в директорию
 cd spacerace_timeline
 
-# Запуск локального сервера (вариант 1)
-python3 -m http.server 8000
+# ПРОСТОЙ СПОСОБ - Прямое открытие (рекомендуется)
+open index.html
 
-# Или используйте npm скрипты (вариант 2)
-npm run serve
-
-# Открытие в браузере
-open http://localhost:8000
+# ИЛИ запуск локального сервера
+python3 -m http.server 3000
+# Откройте: http://localhost:3000
 ```
 
 ### 🚀 Альтернативные Способы Запуска
 ```bash
-# Простое открытие файла (без сервера)
+# 1. Прямое открытие файла (самый простой способ)
 open index.html
 
-# Использование Node.js сервера
-npx http-server -p 8000
+# 2. Python сервер на разных портах
+python3 -m http.server 3000    # http://localhost:3000
+python3 -m http.server 8080   # http://localhost:8080
+python3 -m http.server 9000   # http://localhost:9000
 
-# Использование PHP сервера
-php -S localhost:8000
+# 3. Node.js сервер (если установлен)
+npx http-server -p 3000
+
+# 4. PHP сервер (если установлен)
+php -S localhost:3000
 ```
+
+### ⚠️ Важные Замечания
+- **Порт 8000 может быть занят** - используйте 3000, 8080 или 9000
+- **Проект работает без сервера** - просто откройте `index.html`
+- **Никаких зависимостей** - чистый HTML/CSS/JS проект
+- **Поддерживает все современные браузеры**
 
 ### 🎮 Как Использовать
 1. **Переключение Языка** — кнопка 🇹🇷/🇺🇸 для выбора языка
@@ -196,27 +205,36 @@ git clone https://github.com/c3t1nn/spacerace_timeline.git
 # Dizine geçme
 cd spacerace_timeline
 
-# Yerel sunucu başlatma (seçenek 1)
-python3 -m http.server 8000
+# KOLAY YÖNTEM - Doğrudan açma (önerilen)
+open index.html
 
-# Veya npm scriptlerini kullanın (seçenek 2)
-npm run serve
-
-# Tarayıcıda açma
-open http://localhost:8000
+# VEYA yerel sunucu başlatma
+python3 -m http.server 3000
+# Açın: http://localhost:3000
 ```
 
 ### 🚀 Alternatif Çalıştırma Yöntemleri
 ```bash
-# Basit dosya açma (sunucu olmadan)
+# 1. Doğrudan dosya açma (en kolay yöntem)
 open index.html
 
-# Node.js sunucusu kullanma
-npx http-server -p 8000
+# 2. Python sunucusu farklı portlarda
+python3 -m http.server 3000    # http://localhost:3000
+python3 -m http.server 8080   # http://localhost:8080
+python3 -m http.server 9000   # http://localhost:9000
 
-# PHP sunucusu kullanma
-php -S localhost:8000
+# 3. Node.js sunucusu (kuruluysa)
+npx http-server -p 3000
+
+# 4. PHP sunucusu (kuruluysa)
+php -S localhost:3000
 ```
+
+### ⚠️ Önemli Notlar
+- **Port 8000 kullanımda olabilir** - 3000, 8080 veya 9000 kullanın
+- **Proje sunucu olmadan çalışır** - sadece `index.html` açın
+- **Hiçbir bağımlılık yok** - temiz HTML/CSS/JS projesi
+- **Tüm modern tarayıcıları destekler**
 
 ### 🎮 Nasıl Kullanılır
 1. **Dil Değiştirme** — 🇹🇷/🇺🇸 butonuyla dil seçimi
@@ -315,27 +333,36 @@ git clone https://github.com/c3t1nn/spacerace_timeline.git
 # Navigate to directory
 cd spacerace_timeline
 
-# Start local server (option 1)
-python3 -m http.server 8000
+# EASY METHOD - Direct opening (recommended)
+open index.html
 
-# Or use npm scripts (option 2)
-npm run serve
-
-# Open in browser
-open http://localhost:8000
+# OR start local server
+python3 -m http.server 3000
+# Open: http://localhost:3000
 ```
 
 ### 🚀 Alternative Running Methods
 ```bash
-# Simple file opening (without server)
+# 1. Direct file opening (easiest method)
 open index.html
 
-# Using Node.js server
-npx http-server -p 8000
+# 2. Python server on different ports
+python3 -m http.server 3000    # http://localhost:3000
+python3 -m http.server 8080   # http://localhost:8080
+python3 -m http.server 9000   # http://localhost:9000
 
-# Using PHP server
-php -S localhost:8000
+# 3. Node.js server (if installed)
+npx http-server -p 3000
+
+# 4. PHP server (if installed)
+php -S localhost:3000
 ```
+
+### ⚠️ Important Notes
+- **Port 8000 might be occupied** - use 3000, 8080 or 9000
+- **Project works without server** - just open `index.html`
+- **No dependencies** - pure HTML/CSS/JS project
+- **Supports all modern browsers**
 
 ### 🎮 How to Use
 1. **Language Switch** — 🇹🇷/🇺🇸 button for language selection
