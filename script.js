@@ -1,268 +1,590 @@
+// ===== LANGUAGE SYSTEM =====
+const translations = {
+    tr: {
+        title: "Uzay Yarışı Zaman Çizelgesi",
+        playPause: "Oynat/Duraklat",
+        reset: "Sıfırla",
+        changeLanguage: "Dil Değiştir",
+        progress: "İlerleme"
+    },
+    en: {
+        title: "Space Race Timeline",
+        playPause: "Play/Pause",
+        reset: "Reset",
+        changeLanguage: "Change Language",
+        progress: "Progress"
+    }
+};
+
 // ===== SPACE RACE TIMELINE DATA =====
 const spaceRaceEvents = [
     {
         year: 1955,
-        title: "Sputnik Program Başlangıcı",
-        description: "Sovyetler Birliği, dünyanın ilk yapay uydusunu fırlatma planlarını açıkladı.",
+        title: {
+            tr: "Sputnik Program Başlangıcı",
+            en: "Sputnik Program Begins"
+        },
+        description: {
+            tr: "Sovyetler Birliği, dünyanın ilk yapay uydusunu fırlatma planlarını açıkladı.",
+            en: "The Soviet Union announced plans to launch the world's first artificial satellite."
+        },
         icon: "🛰️",
         flag: "🇷🇺",
-        details: "Sovyetler Birliği, uzay yarışının başlangıcını işaret eden Sputnik programını başlattı.",
+        details: {
+            tr: "Sovyetler Birliği, uzay yarışının başlangıcını işaret eden Sputnik programını başlattı.",
+            en: "The Soviet Union launched the Sputnik program, marking the beginning of the space race."
+        },
         stats: {
-            "Ülke": "Sovyetler Birliği",
-            "Program": "Sputnik",
-            "Durum": "Planlama Aşaması"
+            tr: {
+                "Ülke": "Sovyetler Birliği",
+                "Program": "Sputnik",
+                "Durum": "Planlama Aşaması"
+            },
+            en: {
+                "Country": "Soviet Union",
+                "Program": "Sputnik",
+                "Status": "Planning Phase"
+            }
         },
         special: false
     },
     {
         year: 1957,
-        title: "Sputnik 1 Fırlatıldı",
-        description: "Dünyanın ilk yapay uydusu Sputnik 1, 4 Ekim'de başarıyla fırlatıldı.",
+        title: {
+            tr: "Sputnik 1 Fırlatıldı",
+            en: "Sputnik 1 Launched"
+        },
+        description: {
+            tr: "Dünyanın ilk yapay uydusu Sputnik 1, 4 Ekim'de başarıyla fırlatıldı.",
+            en: "The world's first artificial satellite Sputnik 1 was successfully launched on October 4th."
+        },
         icon: "🛰️",
         flag: "🇷🇺",
-        details: "Sputnik 1, 83.6 kg ağırlığında, 98 dakikada bir Dünya'nın etrafında dönen ilk yapay uydu oldu.",
+        details: {
+            tr: "Sputnik 1, 83.6 kg ağırlığında, 98 dakikada bir Dünya'nın etrafında dönen ilk yapay uydu oldu.",
+            en: "Sputnik 1, weighing 83.6 kg, became the first artificial satellite to orbit Earth every 98 minutes."
+        },
         stats: {
-            "Ağırlık": "83.6 kg",
-            "Yörünge Süresi": "98 dakika",
-            "Çap": "58 cm"
+            tr: {
+                "Ağırlık": "83.6 kg",
+                "Yörünge Süresi": "98 dakika",
+                "Çap": "58 cm"
+            },
+            en: {
+                "Weight": "83.6 kg",
+                "Orbital Period": "98 minutes",
+                "Diameter": "58 cm"
+            }
         },
         special: false
     },
     {
         year: 1957,
-        title: "Sputnik 2 ve Laika",
-        description: "İlk canlı organizma (köpek Laika) uzaya gönderildi.",
+        title: {
+            tr: "Sputnik 2 ve Laika",
+            en: "Sputnik 2 and Laika"
+        },
+        description: {
+            tr: "İlk canlı organizma (köpek Laika) uzaya gönderildi.",
+            en: "The first living organism (dog Laika) was sent to space."
+        },
         icon: "🐕",
         flag: "🇷🇺",
-        details: "Laika, uzayda yaşayan ilk canlı organizma oldu. Bu, insanlı uzay uçuşları için önemli bir adımdı.",
+        details: {
+            tr: "Laika, uzayda yaşayan ilk canlı organizma oldu. Bu, insanlı uzay uçuşları için önemli bir adımdı.",
+            en: "Laika became the first living organism to survive in space. This was an important step for human spaceflight."
+        },
         stats: {
-            "Canlı": "Laika (Köpek)",
-            "Süre": "7 gün",
-            "Sonuç": "Başarılı"
+            tr: {
+                "Canlı": "Laika (Köpek)",
+                "Süre": "7 gün",
+                "Sonuç": "Başarılı"
+            },
+            en: {
+                "Animal": "Laika (Dog)",
+                "Duration": "7 days",
+                "Result": "Successful"
+            }
         },
         special: false
     },
     {
         year: 1958,
-        title: "Explorer 1 Fırlatıldı",
-        description: "ABD'nin ilk başarılı uydusu Explorer 1 fırlatıldı.",
+        title: {
+            tr: "Explorer 1 Fırlatıldı",
+            en: "Explorer 1 Launched"
+        },
+        description: {
+            tr: "ABD'nin ilk başarılı uydusu Explorer 1 fırlatıldı.",
+            en: "The United States' first successful satellite Explorer 1 was launched."
+        },
         icon: "🇺🇸",
         flag: "🇺🇸",
-        details: "ABD, uzay yarışında geri kalmamak için Explorer 1'i başarıyla fırlattı.",
+        details: {
+            tr: "ABD, uzay yarışında geri kalmamak için Explorer 1'i başarıyla fırlattı.",
+            en: "The United States successfully launched Explorer 1 to not fall behind in the space race."
+        },
         stats: {
-            "Ülke": "ABD",
-            "Ağırlık": "13.97 kg",
-            "Yörünge": "Düşük Dünya Yörüngesi"
+            tr: {
+                "Ülke": "ABD",
+                "Ağırlık": "13.97 kg",
+                "Yörünge": "Düşük Dünya Yörüngesi"
+            },
+            en: {
+                "Country": "USA",
+                "Weight": "13.97 kg",
+                "Orbit": "Low Earth Orbit"
+            }
         },
         special: false
     },
     {
         year: 1958,
-        title: "NASA Kuruldu",
-        description: "Ulusal Havacılık ve Uzay Dairesi (NASA) kuruldu.",
+        title: {
+            tr: "NASA Kuruldu",
+            en: "NASA Founded"
+        },
+        description: {
+            tr: "Ulusal Havacılık ve Uzay Dairesi (NASA) kuruldu.",
+            en: "The National Aeronautics and Space Administration (NASA) was established."
+        },
         icon: "🏛️",
         flag: "🇺🇸",
-        details: "NASA, ABD'nin uzay programını koordine etmek için kuruldu.",
+        details: {
+            tr: "NASA, ABD'nin uzay programını koordine etmek için kuruldu.",
+            en: "NASA was established to coordinate the United States' space program."
+        },
         stats: {
-            "Kuruluş": "29 Temmuz 1958",
-            "Merkez": "Washington DC",
-            "Amaç": "Uzay Araştırmaları"
+            tr: {
+                "Kuruluş": "29 Temmuz 1958",
+                "Merkez": "Washington DC",
+                "Amaç": "Uzay Araştırmaları"
+            },
+            en: {
+                "Founded": "July 29, 1958",
+                "Headquarters": "Washington DC",
+                "Purpose": "Space Research"
+            }
         },
         special: false
     },
     {
         year: 1959,
-        title: "Luna 2 - Ay'a İlk Çarpma",
-        description: "Sovyet Luna 2 uzay aracı Ay'a çarpan ilk insan yapımı nesne oldu.",
+        title: {
+            tr: "Luna 2 - Ay'a İlk Çarpma",
+            en: "Luna 2 - First Moon Impact"
+        },
+        description: {
+            tr: "Sovyet Luna 2 uzay aracı Ay'a çarpan ilk insan yapımı nesne oldu.",
+            en: "Soviet Luna 2 spacecraft became the first human-made object to impact the Moon."
+        },
         icon: "🌙",
         flag: "🇷🇺",
-        details: "Luna 2, Ay'ın yüzeyine çarpan ilk insan yapımı nesne oldu.",
+        details: {
+            tr: "Luna 2, Ay'ın yüzeyine çarpan ilk insan yapımı nesne oldu.",
+            en: "Luna 2 became the first human-made object to impact the lunar surface."
+        },
         stats: {
-            "Hedef": "Ay",
-            "Sonuç": "Başarılı Çarpma",
-            "Tarih": "13 Eylül 1959"
+            tr: {
+                "Hedef": "Ay",
+                "Sonuç": "Başarılı Çarpma",
+                "Tarih": "13 Eylül 1959"
+            },
+            en: {
+                "Target": "Moon",
+                "Result": "Successful Impact",
+                "Date": "September 13, 1959"
+            }
         },
         special: false
     },
     {
         year: 1959,
-        title: "Luna 3 - Ay'ın Görünmeyen Yüzü",
-        description: "Luna 3, Ay'ın görünmeyen yüzünün ilk fotoğraflarını çekti.",
+        title: {
+            tr: "Luna 3 - Ay'ın Görünmeyen Yüzü",
+            en: "Luna 3 - Far Side of the Moon"
+        },
+        description: {
+            tr: "Luna 3, Ay'ın görünmeyen yüzünün ilk fotoğraflarını çekti.",
+            en: "Luna 3 took the first photographs of the Moon's far side."
+        },
         icon: "📸",
         flag: "🇷🇺",
-        details: "İlk kez Ay'ın görünmeyen yüzü fotoğraflandı.",
+        details: {
+            tr: "İlk kez Ay'ın görünmeyen yüzü fotoğraflandı.",
+            en: "For the first time, the far side of the Moon was photographed."
+        },
         stats: {
-            "Fotoğraf": "29 adet",
-            "Kalite": "Düşük çözünürlük",
-            "Tarih": "7 Ekim 1959"
+            tr: {
+                "Fotoğraf": "29 adet",
+                "Kalite": "Düşük çözünürlük",
+                "Tarih": "7 Ekim 1959"
+            },
+            en: {
+                "Photos": "29 images",
+                "Quality": "Low resolution",
+                "Date": "October 7, 1959"
+            }
         },
         special: false
     },
     {
         year: 1960,
-        title: "Korabl-Sputnik 2",
-        description: "İlk canlılar (köpekler) uzaydan güvenle döndü.",
+        title: {
+            tr: "Korabl-Sputnik 2",
+            en: "Korabl-Sputnik 2"
+        },
+        description: {
+            tr: "İlk canlılar (köpekler) uzaydan güvenle döndü.",
+            en: "First living creatures (dogs) returned safely from space."
+        },
         icon: "🐕",
         flag: "🇷🇺",
-        details: "Belka ve Strelka adlı köpekler uzaydan güvenle dönen ilk canlılar oldu.",
+        details: {
+            tr: "Belka ve Strelka adlı köpekler uzaydan güvenle dönen ilk canlılar oldu.",
+            en: "Dogs Belka and Strelka became the first living creatures to return safely from space."
+        },
         stats: {
-            "Canlılar": "Belka ve Strelka",
-            "Süre": "1 gün",
-            "Sonuç": "Başarılı Dönüş"
+            tr: {
+                "Canlılar": "Belka ve Strelka",
+                "Süre": "1 gün",
+                "Sonuç": "Başarılı Dönüş"
+            },
+            en: {
+                "Animals": "Belka and Strelka",
+                "Duration": "1 day",
+                "Result": "Successful Return"
+            }
         },
         special: false
     },
     {
         year: 1961,
-        title: "İlk İnsanlı Uzay Uçuşu",
-        description: "Yuri Gagarin, Vostok 1 ile uzaya çıkan ilk insan oldu.",
+        title: {
+            tr: "İlk İnsanlı Uzay Uçuşu",
+            en: "First Human Spaceflight"
+        },
+        description: {
+            tr: "Yuri Gagarin, Vostok 1 ile uzaya çıkan ilk insan oldu.",
+            en: "Yuri Gagarin became the first human to travel to space aboard Vostok 1."
+        },
         icon: "👨‍🚀",
         flag: "🇷🇺",
-        details: "Yuri Gagarin, Vostok 1 uzay aracıyla Dünya'nın yörüngesinde 108 dakika süren tarihi uçuşunu gerçekleştirdi.",
+        details: {
+            tr: "Yuri Gagarin, Vostok 1 uzay aracıyla Dünya'nın yörüngesinde 108 dakika süren tarihi uçuşunu gerçekleştirdi.",
+            en: "Yuri Gagarin completed his historic 108-minute flight in Earth's orbit aboard the Vostok 1 spacecraft."
+        },
         stats: {
-            "Astronot": "Yuri Gagarin",
-            "Süre": "108 dakika",
-            "Yükseklik": "327 km"
+            tr: {
+                "Astronot": "Yuri Gagarin",
+                "Süre": "108 dakika",
+                "Yükseklik": "327 km"
+            },
+            en: {
+                "Astronaut": "Yuri Gagarin",
+                "Duration": "108 minutes",
+                "Altitude": "327 km"
+            }
         },
         special: true
     },
     {
         year: 1961,
-        title: "Mercury-Redstone 3",
-        description: "Alan Shepard, ABD'nin ilk insanlı uzay uçuşunu gerçekleştirdi.",
+        title: {
+            tr: "Mercury-Redstone 3",
+            en: "Mercury-Redstone 3"
+        },
+        description: {
+            tr: "Alan Shepard, ABD'nin ilk insanlı uzay uçuşunu gerçekleştirdi.",
+            en: "Alan Shepard performed the United States' first human spaceflight."
+        },
         icon: "🚀",
         flag: "🇺🇸",
-        details: "Alan Shepard, Freedom 7 kapsülüyle 15 dakikalık suborbital uçuş gerçekleştirdi.",
+        details: {
+            tr: "Alan Shepard, Freedom 7 kapsülüyle 15 dakikalık suborbital uçuş gerçekleştirdi.",
+            en: "Alan Shepard completed a 15-minute suborbital flight in the Freedom 7 capsule."
+        },
         stats: {
-            "Astronot": "Alan Shepard",
-            "Süre": "15 dakika",
-            "Yükseklik": "187 km"
+            tr: {
+                "Astronot": "Alan Shepard",
+                "Süre": "15 dakika",
+                "Yükseklik": "187 km"
+            },
+            en: {
+                "Astronaut": "Alan Shepard",
+                "Duration": "15 minutes",
+                "Altitude": "187 km"
+            }
         },
         special: false
     },
     {
         year: 1962,
-        title: "Friendship 7 - John Glenn",
-        description: "John Glenn, ABD'nin ilk orbital uçuşunu gerçekleştirdi.",
+        title: {
+            tr: "Friendship 7 - John Glenn",
+            en: "Friendship 7 - John Glenn"
+        },
+        description: {
+            tr: "John Glenn, ABD'nin ilk orbital uçuşunu gerçekleştirdi.",
+            en: "John Glenn performed the United States' first orbital flight."
+        },
         icon: "🌍",
         flag: "🇺🇸",
-        details: "John Glenn, Friendship 7 ile Dünya'nın etrafında 3 tur attı.",
+        details: {
+            tr: "John Glenn, Friendship 7 ile Dünya'nın etrafında 3 tur attı.",
+            en: "John Glenn completed 3 orbits around Earth in Friendship 7."
+        },
         stats: {
-            "Astronot": "John Glenn",
-            "Tur Sayısı": "3 tur",
-            "Süre": "4 saat 55 dakika"
+            tr: {
+                "Astronot": "John Glenn",
+                "Tur Sayısı": "3 tur",
+                "Süre": "4 saat 55 dakika"
+            },
+            en: {
+                "Astronaut": "John Glenn",
+                "Orbits": "3 orbits",
+                "Duration": "4 hours 55 minutes"
+            }
         },
         special: false
     },
     {
         year: 1963,
-        title: "Vostok 6 - Valentina Tereshkova",
-        description: "Valentina Tereshkova, uzaya çıkan ilk kadın oldu.",
+        title: {
+            tr: "Vostok 6 - Valentina Tereshkova",
+            en: "Vostok 6 - Valentina Tereshkova"
+        },
+        description: {
+            tr: "Valentina Tereshkova, uzaya çıkan ilk kadın oldu.",
+            en: "Valentina Tereshkova became the first woman to travel to space."
+        },
         icon: "👩‍🚀",
         flag: "🇷🇺",
-        details: "Valentina Tereshkova, Vostok 6 ile uzaya çıkan ilk kadın astronot oldu.",
+        details: {
+            tr: "Valentina Tereshkova, Vostok 6 ile uzaya çıkan ilk kadın astronot oldu.",
+            en: "Valentina Tereshkova became the first female astronaut to travel to space aboard Vostok 6."
+        },
         stats: {
-            "Astronot": "Valentina Tereshkova",
-            "Süre": "3 gün",
-            "Tur Sayısı": "48 tur"
+            tr: {
+                "Astronot": "Valentina Tereshkova",
+                "Süre": "3 gün",
+                "Tur Sayısı": "48 tur"
+            },
+            en: {
+                "Astronaut": "Valentina Tereshkova",
+                "Duration": "3 days",
+                "Orbits": "48 orbits"
+            }
         },
         special: false
     },
     {
         year: 1965,
-        title: "Voskhod 2 - İlk Uzay Yürüyüşü",
-        description: "Alexei Leonov, ilk uzay yürüyüşünü gerçekleştirdi.",
+        title: {
+            tr: "Voskhod 2 - İlk Uzay Yürüyüşü",
+            en: "Voskhod 2 - First Spacewalk"
+        },
+        description: {
+            tr: "Alexei Leonov, ilk uzay yürüyüşünü gerçekleştirdi.",
+            en: "Alexei Leonov performed the first spacewalk in history."
+        },
         icon: "🚶‍♂️",
         flag: "🇷🇺",
-        details: "Alexei Leonov, Voskhod 2'den çıkarak 12 dakika süren ilk uzay yürüyüşünü yaptı.",
+        details: {
+            tr: "Alexei Leonov, Voskhod 2'den çıkarak 12 dakika süren ilk uzay yürüyüşünü yaptı.",
+            en: "Alexei Leonov exited Voskhod 2 and performed the first spacewalk lasting 12 minutes."
+        },
         stats: {
-            "Astronot": "Alexei Leonov",
-            "Süre": "12 dakika",
-            "Mesafe": "5.3 metre"
+            tr: {
+                "Astronot": "Alexei Leonov",
+                "Süre": "12 dakika",
+                "Mesafe": "5.3 metre"
+            },
+            en: {
+                "Astronaut": "Alexei Leonov",
+                "Duration": "12 minutes",
+                "Distance": "5.3 meters"
+            }
         },
         special: false
     },
     {
         year: 1965,
-        title: "Gemini 4 - Ed White",
-        description: "Ed White, ABD'nin ilk uzay yürüyüşünü gerçekleştirdi.",
+        title: {
+            tr: "Gemini 4 - Ed White",
+            en: "Gemini 4 - Ed White"
+        },
+        description: {
+            tr: "Ed White, ABD'nin ilk uzay yürüyüşünü gerçekleştirdi.",
+            en: "Ed White performed the United States' first spacewalk."
+        },
         icon: "🚶‍♂️",
         flag: "🇺🇸",
-        details: "Ed White, Gemini 4'ten çıkarak 20 dakika süren uzay yürüyüşü yaptı.",
+        details: {
+            tr: "Ed White, Gemini 4'ten çıkarak 20 dakika süren uzay yürüyüşü yaptı.",
+            en: "Ed White exited Gemini 4 and performed a 20-minute spacewalk."
+        },
         stats: {
-            "Astronot": "Ed White",
-            "Süre": "20 dakika",
-            "Gemini": "4"
+            tr: {
+                "Astronot": "Ed White",
+                "Süre": "20 dakika",
+                "Gemini": "4"
+            },
+            en: {
+                "Astronaut": "Ed White",
+                "Duration": "20 minutes",
+                "Mission": "Gemini 4"
+            }
         },
         special: false
     },
     {
         year: 1966,
-        title: "Luna 9 - Ay'a İlk Yumuşak İniş",
-        description: "Luna 9, Ay'a yumuşak iniş yapan ilk uzay aracı oldu.",
+        title: {
+            tr: "Luna 9 - Ay'a İlk Yumuşak İniş",
+            en: "Luna 9 - First Soft Moon Landing"
+        },
+        description: {
+            tr: "Luna 9, Ay'a yumuşak iniş yapan ilk uzay aracı oldu.",
+            en: "Luna 9 became the first spacecraft to make a soft landing on the Moon."
+        },
         icon: "🌙",
         flag: "🇷🇺",
-        details: "Luna 9, Ay'ın yüzeyine yumuşak iniş yapan ilk uzay aracı oldu.",
+        details: {
+            tr: "Luna 9, Ay'ın yüzeyine yumuşak iniş yapan ilk uzay aracı oldu.",
+            en: "Luna 9 became the first spacecraft to make a soft landing on the lunar surface."
+        },
         stats: {
-            "Hedef": "Ay",
-            "İniş": "Yumuşak",
-            "Tarih": "3 Şubat 1966"
+            tr: {
+                "Hedef": "Ay",
+                "İniş": "Yumuşak",
+                "Tarih": "3 Şubat 1966"
+            },
+            en: {
+                "Target": "Moon",
+                "Landing": "Soft",
+                "Date": "February 3, 1966"
+            }
         },
         special: false
     },
     {
         year: 1968,
-        title: "Apollo 8 - Ay'ın Etrafında Tur",
-        description: "Apollo 8, Ay'ın etrafında tur atan ilk insanlı uzay aracı oldu.",
+        title: {
+            tr: "Apollo 8 - Ay'ın Etrafında Tur",
+            en: "Apollo 8 - First Manned Moon Orbit"
+        },
+        description: {
+            tr: "Apollo 8, Ay'ın etrafında tur atan ilk insanlı uzay aracı oldu.",
+            en: "Apollo 8 became the first manned spacecraft to orbit the Moon."
+        },
         icon: "🌙",
         flag: "🇺🇸",
-        details: "Frank Borman, James Lovell ve William Anders, Ay'ın etrafında 10 tur attı.",
+        details: {
+            tr: "Frank Borman, James Lovell ve William Anders, Ay'ın etrafında 10 tur attı.",
+            en: "Frank Borman, James Lovell and William Anders completed 10 orbits around the Moon."
+        },
         stats: {
-            "Astronotlar": "3 kişi",
-            "Tur Sayısı": "10 tur",
-            "Süre": "6 gün"
+            tr: {
+                "Astronotlar": "3 kişi",
+                "Tur Sayısı": "10 tur",
+                "Süre": "6 gün"
+            },
+            en: {
+                "Astronauts": "3 people",
+                "Orbits": "10 orbits",
+                "Duration": "6 days"
+            }
         },
         special: false
     },
     {
         year: 1969,
-        title: "Apollo 11 - Ay'a İlk İniş",
-        description: "Neil Armstrong ve Buzz Aldrin, Ay'a ayak basan ilk insanlar oldu.",
+        title: {
+            tr: "Apollo 11 - Ay'a İlk İniş",
+            en: "Apollo 11 - First Moon Landing"
+        },
+        description: {
+            tr: "Neil Armstrong ve Buzz Aldrin, Ay'a ayak basan ilk insanlar oldu.",
+            en: "Neil Armstrong and Buzz Aldrin became the first humans to set foot on the Moon."
+        },
         icon: "👨‍🚀",
         flag: "🇺🇸",
-        details: "Neil Armstrong ve Buzz Aldrin, Ay'ın yüzeyine ayak basan ilk insanlar oldu.",
+        details: {
+            tr: "Neil Armstrong ve Buzz Aldrin, Ay'ın yüzeyine ayak basan ilk insanlar oldu.",
+            en: "Neil Armstrong and Buzz Aldrin became the first humans to set foot on the lunar surface."
+        },
         stats: {
-            "Astronotlar": "Neil Armstrong, Buzz Aldrin",
-            "Süre": "21 saat 36 dakika",
-            "Tarih": "20 Temmuz 1969"
+            tr: {
+                "Astronotlar": "Neil Armstrong, Buzz Aldrin",
+                "Süre": "21 saat 36 dakika",
+                "Tarih": "20 Temmuz 1969"
+            },
+            en: {
+                "Astronauts": "Neil Armstrong, Buzz Aldrin",
+                "Duration": "21 hours 36 minutes",
+                "Date": "July 20, 1969"
+            }
         },
         special: true
     },
     {
         year: 1971,
-        title: "Salyut 1 - İlk Uzay İstasyonu",
-        description: "Salyut 1, dünyanın ilk uzay istasyonu olarak fırlatıldı.",
+        title: {
+            tr: "Salyut 1 - İlk Uzay İstasyonu",
+            en: "Salyut 1 - First Space Station"
+        },
+        description: {
+            tr: "Salyut 1, dünyanın ilk uzay istasyonu olarak fırlatıldı.",
+            en: "Salyut 1 was launched as the world's first space station."
+        },
         icon: "🏠",
         flag: "🇷🇺",
-        details: "Salyut 1, uzayda kalıcı yaşam için ilk uzay istasyonu oldu.",
+        details: {
+            tr: "Salyut 1, uzayda kalıcı yaşam için ilk uzay istasyonu oldu.",
+            en: "Salyut 1 became the first space station for permanent living in space."
+        },
         stats: {
-            "İstasyon": "Salyut 1",
-            "Süre": "175 gün",
-            "Mürettebat": "3 kişi"
+            tr: {
+                "İstasyon": "Salyut 1",
+                "Süre": "175 gün",
+                "Mürettebat": "3 kişi"
+            },
+            en: {
+                "Station": "Salyut 1",
+                "Duration": "175 days",
+                "Crew": "3 people"
+            }
         },
         special: false
     },
     {
         year: 1975,
-        title: "Apollo-Soyuz Test Projesi",
-        description: "ABD ve Sovyetler Birliği'nin ilk ortak uzay görevi.",
+        title: {
+            tr: "Apollo-Soyuz Test Projesi",
+            en: "Apollo-Soyuz Test Project"
+        },
+        description: {
+            tr: "ABD ve Sovyetler Birliği'nin ilk ortak uzay görevi.",
+            en: "The first joint space mission between the United States and the Soviet Union."
+        },
         icon: "🤝",
         flag: "🌍",
-        details: "Apollo ve Soyuz uzay araçları uzayda kenetlendi, soğuk savaş döneminde işbirliği sembolü oldu.",
+        details: {
+            tr: "Apollo ve Soyuz uzay araçları uzayda kenetlendi, soğuk savaş döneminde işbirliği sembolü oldu.",
+            en: "Apollo and Soyuz spacecraft docked in space, becoming a symbol of cooperation during the Cold War."
+        },
         stats: {
-            "Ülkeler": "ABD ve Sovyetler Birliği",
-            "Süre": "2 gün",
-            "Kenetlenme": "Başarılı"
+            tr: {
+                "Ülkeler": "ABD ve Sovyetler Birliği",
+                "Süre": "2 gün",
+                "Kenetlenme": "Başarılı"
+            },
+            en: {
+                "Countries": "USA and Soviet Union",
+                "Duration": "2 days",
+                "Docking": "Successful"
+            }
         },
         special: false
     }
@@ -279,6 +601,9 @@ let heroDescription = null;
 let heroFlag = null;
 let progressFill = null;
 let progressText = null;
+let currentLanguage = localStorage.getItem('spacerace_language') || 'tr';
+let langBtn = null;
+let langIcon = null;
 
 // ===== INITIALIZATION =====
 document.addEventListener('DOMContentLoaded', function() {
@@ -317,6 +642,60 @@ function initializeElements() {
     heroFlag = document.getElementById('heroFlag');
     progressFill = document.getElementById('progressFill');
     progressText = document.getElementById('progressText');
+    langBtn = document.getElementById('langBtn');
+    langIcon = document.getElementById('langIcon');
+    
+    // Initialize language
+    updateLanguageUI();
+}
+
+// ===== LANGUAGE SYSTEM FUNCTIONS =====
+function updateLanguageUI() {
+    if (langIcon) {
+        langIcon.textContent = currentLanguage === 'tr' ? '🇹🇷' : '🇺🇸';
+    }
+    
+    // Update document title
+    document.title = translations[currentLanguage].title;
+    
+    // Update navbar title
+    const navbarTitle = document.querySelector('.logo h1');
+    if (navbarTitle) {
+        navbarTitle.textContent = translations[currentLanguage].title;
+    }
+    
+    // Update button titles
+    const playBtn = document.getElementById('playPauseBtn');
+    const resetBtn = document.getElementById('resetBtn');
+    const langBtn = document.getElementById('langBtn');
+    
+    if (playBtn) playBtn.title = translations[currentLanguage].playPause;
+    if (resetBtn) resetBtn.title = translations[currentLanguage].reset;
+    if (langBtn) langBtn.title = translations[currentLanguage].changeLanguage;
+}
+
+function toggleLanguage() {
+    currentLanguage = currentLanguage === 'tr' ? 'en' : 'tr';
+    localStorage.setItem('spacerace_language', currentLanguage);
+    updateLanguageUI();
+    updateHeroContent();
+    updateTimelineCards();
+}
+
+function updateTimelineCards() {
+    const cards = document.querySelectorAll('.event-card');
+    cards.forEach((card, index) => {
+        const event = spaceRaceEvents[index];
+        const titleElement = card.querySelector('.event-title');
+        const descriptionElement = card.querySelector('.event-description');
+        
+        if (titleElement) {
+            titleElement.textContent = typeof event.title === 'object' ? event.title[currentLanguage] : event.title;
+        }
+        if (descriptionElement) {
+            descriptionElement.textContent = typeof event.description === 'object' ? event.description[currentLanguage] : event.description;
+        }
+    });
 }
 
 // ===== TIMELINE CREATION =====
@@ -338,11 +717,14 @@ function createEventCard(event, index) {
     // Add staggered animation delay
     card.style.animationDelay = `${index * 0.2}s`;
     
+    const title = typeof event.title === 'object' ? event.title[currentLanguage] : event.title;
+    const description = typeof event.description === 'object' ? event.description[currentLanguage] : event.description;
+    
     card.innerHTML = `
         <div class="event-icon">${event.icon}</div>
         <div class="event-year">${event.year}</div>
-        <div class="event-title">${event.title}</div>
-        <div class="event-description">${event.description}</div>
+        <div class="event-title">${title}</div>
+        <div class="event-description">${description}</div>
     `;
     
     // Add event listeners
@@ -392,8 +774,12 @@ function updateHeroContent() {
     
     setTimeout(() => {
         heroYear.textContent = event.year;
-        heroTitle.textContent = event.title;
-        heroDescription.textContent = event.details;
+        
+        const title = typeof event.title === 'object' ? event.title[currentLanguage] : event.title;
+        const details = typeof event.details === 'object' ? event.details[currentLanguage] : event.details;
+        
+        heroTitle.textContent = title;
+        heroDescription.textContent = details;
         heroFlag.textContent = event.flag;
         
         heroContent.style.opacity = '1';
@@ -403,7 +789,8 @@ function updateHeroContent() {
     // Update stats
     const statsContainer = document.querySelector('.event-stats');
     if (statsContainer) {
-        const stats = Object.entries(event.stats).slice(0, 2);
+        const currentStats = typeof event.stats === 'object' && event.stats[currentLanguage] ? event.stats[currentLanguage] : event.stats;
+        const stats = Object.entries(currentStats).slice(0, 2);
         statsContainer.innerHTML = stats.map(([label, value]) => `
             <div class="stat">
                 <span class="stat-label">${label}</span>
@@ -421,8 +808,12 @@ function updateHeroOnHover(event) {
     
     setTimeout(() => {
         heroYear.textContent = event.year;
-        heroTitle.textContent = event.title;
-        heroDescription.textContent = event.details; // Aynı bilgiyi göster
+        
+        const title = typeof event.title === 'object' ? event.title[currentLanguage] : event.title;
+        const details = typeof event.details === 'object' ? event.details[currentLanguage] : event.details;
+        
+        heroTitle.textContent = title;
+        heroDescription.textContent = details; // Aynı bilgiyi göster
         heroFlag.textContent = event.flag;
         
         heroContent.style.opacity = '1';
@@ -437,6 +828,11 @@ function setupEventListeners() {
     
     // Reset button
     document.getElementById('resetBtn').addEventListener('click', resetTimeline);
+    
+    // Language button
+    if (langBtn) {
+        langBtn.addEventListener('click', toggleLanguage);
+    }
     
     // Navigation arrows
     document.getElementById('prevBtn').addEventListener('click', () => navigateEvent(-1));
