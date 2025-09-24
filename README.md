@@ -198,7 +198,7 @@ php -S localhost:3000
 - **Responsive** — 4 farklı breakpoint
 
 ### 📱 Kurulum ve Çalıştırma
-```bash
+   ```bash
 # Depoyu klonlama
 git clone https://github.com/c3t1nn/spacerace_timeline.git
 
@@ -214,7 +214,7 @@ python3 -m http.server 3000
 ```
 
 ### 🚀 Alternatif Çalıştırma Yöntemleri
-```bash
+   ```bash
 # 1. Doğrudan dosya açma (en kolay yöntem)
 open index.html
 
