@@ -1,0 +1,43 @@
+{
+  "name": "spacerace_timeline",
+  "version": "2.0.0",
+  "description": "Interactive Space Race Timeline - Modern animations with native Mac feel",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "serve": "python3 -m http.server 8000",
+    "dev": "python -m http.server 3000"
+  },
+  "keywords": [
+    "space-race",
+    "timeline",
+    "interactive",
+    "animation",
+    "glassmorphism",
+    "spacerace",
+    "space-history",
+    "web-app",
+    "vanilla-js",
+    "css-animations"
+  ],
+  "author": "AI Assistant",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/username/spacerace_timeline.git"
+  },
+  "homepage": "https://username.github.io/spacerace_timeline",
+  "bugs": {
+    "url": "https://github.com/username/spacerace_timeline/issues"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "devDependencies": {},
+  "dependencies": {}
+}

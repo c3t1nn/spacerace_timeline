@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚀 Space Race Timeline</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@300;400;500;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Background Stars -->
+    <div class="stars-container">
+        <div class="stars stars-1"></div>
+        <div class="stars stars-2"></div>
+        <div class="stars stars-3"></div>
+        <div class="planets-container">
+            <div class="distant-planet planet-1"></div>
+            <div class="distant-planet planet-2"></div>
+            <div class="distant-planet planet-3"></div>
+            <div class="distant-planet planet-4"></div>
+            <div class="distant-planet planet-5"></div>
+            <div class="distant-planet planet-6"></div>
+        </div>
+    </div>
+    
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="rocket-icon">🚀</div>
+                <h1>Space Race Timeline</h1>
+            </div>
+            <div class="controls">
+                <button id="playPauseBtn" class="control-btn">
+                    <span class="play-icon">▶️</span>
+                </button>
+                <button id="resetBtn" class="control-btn">
+                    <span class="reset-icon">🔄</span>
+                </button>
+            </div>
+        </div>
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div id="progressFill" class="progress-fill"></div>
+            </div>
+            <span id="progressText" class="progress-text">0%</span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-left">
+                <div class="portrait-container">
+                    <div class="planet-container">
+                        <div class="planet">
+                            <div class="planet-surface"></div>
+                            <div class="planet-atmosphere"></div>
+                            <div class="planet-rings"></div>
+                        </div>
+                        <div class="flag-display" id="heroFlag">🇷🇺</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-right">
+                <div class="event-details">
+                    <div class="event-year" id="heroYear">1961</div>
+                    <h2 class="event-title" id="heroTitle">İlk İnsanlı Uzay Uçuşu</h2>
+                    <p class="event-description" id="heroDescription">
+                        Yuri Gagarin, Vostok 1 uzay aracıyla Dünya'nın yörüngesinde 108 dakika süren tarihi uçuşunu gerçekleştirdi. Bu, insanlığın uzaya çıkışının başlangıcıydı.
+                    </p>
+                    <div class="event-stats">
+                        <div class="stat">
+                            <span class="stat-label">Süre</span>
+                            <span class="stat-value">108 dakika</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Yükseklik</span>
+                            <span class="stat-value">327 km</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Container -->
+    <section class="timeline-section">
+        <div class="timeline-container">
+            <button class="nav-arrow nav-arrow-left" id="prevBtn">‹</button>
+            <div class="timeline-wrapper">
+                <div class="timeline-path"></div>
+                <div class="timeline-events" id="timelineEvents">
+                    <!-- Events will be dynamically generated -->
+                </div>
+            </div>
+            <button class="nav-arrow nav-arrow-right" id="nextBtn">›</button>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="eventModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="modal-header">
+                <div class="modal-year" id="modalYear"></div>
+                <h2 class="modal-title" id="modalTitle"></h2>
+            </div>
+            <div class="modal-body">
+                <div class="modal-description" id="modalDescription"></div>
+                <div class="modal-details" id="modalDetails"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
