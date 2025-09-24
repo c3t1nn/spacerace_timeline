@@ -268,6 +268,8 @@ Bu proje MIT lisansı altında lisanslanmıştır — detaylar için [LICENSE](L
 ### 👨‍💻 Yazar
 **c3t1nn** — [GitHub](https://github.com/c3t1nn)
 
+</details>
+
 ---
 
 <details>
